@@ -1,0 +1,38 @@
+name: Bootstrap Portfolio
+on:
+  workflow_dispatch:
+
+jobs:
+  create-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Create folders and files
+        run: |
+          mkdir -p 01_Foundations 02_Red_Team 03_Blue_Team 04_Cloud_Security 05_Scripts_Tools 06_Reports
+          echo "# Networking Basics" > 01_Foundations/networking_basics.md
+          echo "# Linux Commands" > 01_Foundations/linux_commands.md
+          echo "# Windows Security" > 01_Foundations/windows_security.md
+          echo "# Nmap Scans" > 02_Red_Team/nmap_scans.md
+          echo "# SQL Injection" > 02_Red_Team/sql_injection.md
+          echo "# Privilege Escalation" > 02_Red_Team/privilege_escalation.md
+          echo "# Log Analysis" > 03_Blue_Team/log_analysis.md
+          echo "# Incident Response" > 03_Blue_Team/incident_response.md
+          echo "# SIEM Basics" > 03_Blue_Team/siem_basics.md
+          echo "# AWS IAM" > 04_Cloud_Security/aws_iam.md
+          echo "# Cloud Logging" > 04_Cloud_Security/cloud_logging.md
+          echo "# Log Analyzer" > 05_Scripts_Tools/log_analyzer.py
+          echo "# Port Scanner" > 05_Scripts_Tools/port_scanner.py
+          echo "# Week 1 Report" > 06_Reports/week1_report.md
+          echo "# Week 4 Red Team Report" > 06_Reports/week4_red_team_report.md
+          echo "# SOC Incident Report" > 06_Reports/soc_incident_report.md
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Bootstrap portfolio structure"
+          git push
