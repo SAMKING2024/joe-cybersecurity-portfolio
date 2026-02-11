@@ -1,0 +1,5 @@
+| File                      | Starter Content                                                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `nmap_scans.md`           | `# Nmap Scans\n\n## Objective\nScan network hosts and open ports.\n\n## Tools\nNmap\n\n## Labs\n- Scan 192.168.1.0/24\n- Identify live hosts\n- Note open ports and services`                  |
+| `sql_injection.md`        | `# SQL Injection\n\n## Objective\nLearn to find and exploit SQL injection vulnerabilities.\n\n## Labs\nDocument vulnerable URLs and payloads.\n## Remediation\nHow to secure the input forms.` |
+| `privilege_escalation.md` | `# Privilege Escalation\n\n## Objective\nLearn techniques to escalate privileges on Windows/Linux.\n\n## Labs\nDocument methods, tools used, and results.`                                     |
